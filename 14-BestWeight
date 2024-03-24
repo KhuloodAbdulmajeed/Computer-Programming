@@ -1,0 +1,45 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package khuloodabdulmajeed_bestw;
+
+/**
+Name: Khulood Khalid Abdulmajeed
+ID: 441009999
+GROUP: 14
+Lab#7
+ */
+import java.util.Scanner;
+public class KhuloodAbdulmajeed_BestW {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+         Scanner get= new Scanner(System.in);
+         System.out.println("Enter Your weight in Kg:");
+         float weight= get.nextFloat();
+         System.out.println("Enter Your height in cm:");
+         float height= get.nextFloat();
+         
+         double BW = (height-100)-( (height-150)/2.5 );
+         if(BW>weight){
+             double NeedToGain = BW-weight;
+             System.out.println("Your BW is:"+BW+"Kg");
+             System.out.println("You have to gain:"+NeedToGain+"Kg");
+         }else if (BW<weight){
+             double NeedToLose = weight-BW;
+             System.out.println("Your BW is:"+BW+"Kg");
+             System.out.println("You have to gain:"+NeedToLose+"Kg");
+             
+         } else if (BW==weight){
+             System.out.println("Your BW is:"+BW+"Kg");
+             System.out.println("Congrats!!! Your weight is ideal");
+             
+         }
+                
+    }
+    
+}
