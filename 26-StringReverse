@@ -1,0 +1,46 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package khuloodabdulmajeed_stringreverse;
+
+/**
+Name:Khulood Khalied Abdulmajeed
+ID:441009999
+GROUP:14
+Lab#11
+ */
+import java.util.Scanner;//The Scanner import declaration
+public class KhuloodAbdulmajeed_StringReverse {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {//Start of main
+        Scanner get = new Scanner (System.in);//Scanner object named get is created
+        System.out.println("Enter a one line sentance :");//Print what inside the "" to the user to enter string +here we use println to get the input in the new line
+        String EnterdString = get.nextLine();//This one to get string from the user
+        System.out.println("Reverse String:");//Print what inside the "" +here we use println to get the input in the new line
+        
+        StringReverse(EnterdString);//Calling the isRectangle method with EnterdString argument
+        
+        
+    }//End of main
+    public static void StringReverse(String inStr){//Start of StringReverse method + unreturn type (void)+  String parameter list is: String inStr
+        char OutStr;//A variable named OutStr has been declared  by ichar(character) data type 
+        int LengOfStr = inStr.length();//A variable named LengOfStr has been declared  by int(integer) data type and initialized to inStr.length() to see the length of inStr 
+        for(int i=LengOfStr-1 ; i>=0 ;i--){/*Start of for loop:[First Statement] a variable named i has been declared by int(integer) 
+            data type and initialized to LengOfStr-1 which will excuted once before the loop begins(initial-action);[Second Staement]the loop body 
+            will excuted until this condition i greater than or equal to 0 become false (loop condition); 
+            [Third Statement] This statement i-- (i=i-1) will excuted after each loop(action-after-each-loop)*/
+            OutStr = inStr.charAt(i);//OutStr has been initialized to inStr.charAt(i) to see the character of all the OutStr. NOTE: we did subtract 1 from the length since index start with 0 so its less than length by 1
+            if (OutStr =='a' ||OutStr =='A')continue;// if index of string equal to 1 than skip it and back to the for loop
+            System.out.print(OutStr);//Print the OutStr (charcter)
+            
+            
+        }//End of for loop
+        
+    }//End of StringReverse method
+    
+}//End of class
