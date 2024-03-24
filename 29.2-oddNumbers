@@ -1,0 +1,109 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package testoddnumbers;
+
+/**
+Name:Khulood Khalied Abdulmajeed
+ID:441009999
+GROUP:14
+Lab#12
+ */
+public class OddNumbers {//Start of OddNumbers class
+    public static int contOddNumbers (int []a){//Start of contOddNumbers method + return type (int(integer))+  int parameter list are: int []a
+        int counter =0 ;//A variable named counter has been declared  by int(integer) data type and initialized to 0
+        int LengthOfArray = a.length;//To calculate the length of a array
+       for(int i = 0; i < LengthOfArray ; i++){/*Start of for loop:[First Statement] a variable named i has been  
+             initialized to 0 which will excuted once before the loop begins(initial-action);[Second Staement]the loop body 
+            will excuted until this condition i less than LengthOfArray  become false (loop condition); 
+            [Third Statement] This statement i++ (i= i+1) will excuted after each loop(action-after-each-loop)*/
+        
+           if ( a[i]%2==0){}//if the reminder of i element in a array by 2 equal 0 then do notheng since its even number
+               //continue;
+           else ++counter;//if the reminder of i element in a array by 2 doesn't equal 0 then add one to the counter since its odd number
+       }//End of for loop
+       return counter;//return the value of counter int(integer)
+    }//End of contOddNumbers method 
+    public static int sumOddNumbers (int []a){//Start of sumOddNumbers method + return type (int(integer))+  int parameter list are: int []a
+       int sum =0 ;//A variable named sum has been declared  by int(integer) data type and initialized to 0
+        int LengthOfArray = a.length;//To calculate the length of a array
+       for(int i = 0; i < LengthOfArray ; i++){/*Start of for loop:[First Statement] a variable named i has been  
+             initialized to 0 which will excuted once before the loop begins(initial-action);[Second Staement]the loop body 
+            will excuted until this condition i less than LengthOfArray  become false (loop condition); 
+            [Third Statement] This statement i++ (i= i+1) will excuted after each loop(action-after-each-loop)*/
+           if ( a[i]%2==0){}//if the reminder of i element in a array by 2 equal 0 then do notheng since its even number
+               //continue;
+           else sum+=a[i];//if the reminder of i element in a array by 2 doesn't equal 0 then let sum equal sum plus the value of i elemnent in a array since its odd number
+       }//End of for loop
+       return sum; //return the value of sum int(integer)
+    }//End of sumOddNumbers method 
+    public static double averageOddNumber (int []a){//Start of averageOddNumber method + return type (double)+  int parameter list are: int []a
+        double average = 0;//A variable named average has been declared  by double data type and initialized to 0
+        int LengthOfArray = a.length;//To calculate the length of a array
+        double sum =sumOddNumbers(a);// A variable named sum has been declared to double data type and initialized to the calling averageOddNumber method with a argument 
+        average = sum/LengthOfArray;//let the aveage equal sum divide by LengthOfArray
+        
+        return average;//return the value of average double 
+    }//End of averageOddNumber method
+    public static String largestOddNumber (int []a){//Start of largestOddNumber method + return type (String)+  int parameter list are: int []a
+        int max=0  ;//A variable named max has been declared  by int(integer) data type and initialized to 0
+        int LengthOfArray = a.length;//To calculate the length of a array
+        //int CounterForEven=0;
+        int CounterForOdd=0;//A variable named CounterForOdd has been declared  by int(integer) data type and initialized to 0
+        for (int i =0 ; i<LengthOfArray ; ++i){/*Start of for loop:[First Statement] a variable named i has been  
+             initialized to 0 which will excuted once before the loop begins(initial-action);[Second Staement]the loop body 
+            will excuted until this condition i less than LengthOfArray  become false (loop condition); 
+            [Third Statement] This statement i++ (i= i+1) will excuted after each loop(action-after-each-loop)*/
+            if (a[i] % 2 ==0){//if the reminder of i element in a array by 2 equal 0 then do notheng since its even number
+                //++CounterForEven;
+            } else{//if the reminder of i element in a array by 2 doesn't equal 0  do what in else body since its odd number
+                ++CounterForOdd;//add one to CounterForOdd
+                if (a[i] > max)// if the value of i element in a array grater than the max
+                    max = a[i]; //then let max intilize to the value of i element in a array 
+            }//End of else body
+        }//End of for loop
+        if (CounterForOdd ==0){//if the CounterForOdd equal zero mean there is NO odd number
+            return "Odd Numbers are NOT Available";//return that string 
+        }//End of if body
+         return String.valueOf(max);//return the String max(Here we change the int(integer) max to String data type
+    }//End of largestOddNumber method
+    public static String smallestOddNumber (int []a){//Start of smallestOddNumber method + return type (String)+  int parameter list are: int []a
+        int min=100  ;//A variable named min has been declared  by int(integer) data type and initialized to 100
+        int LengthOfArray = a.length;//To calculate the length of a array
+        //int CounterForEven=0;
+        int CounterForOdd=0;//A variable named CounterForOdd has been declared  by int(integer) data type and initialized to 0
+        for (int i =0 ; i<LengthOfArray ; ++i){/*Start of for loop:[First Statement] a variable named i has been  
+             initialized to 0 which will excuted once before the loop begins(initial-action);[Second Staement]the loop body 
+            will excuted until this condition i less than LengthOfArray  become false (loop condition); 
+            [Third Statement] This statement i++ (i= i+1) will excuted after each loop(action-after-each-loop)*/
+            if (a[i] % 2 ==0){//if the reminder of i element in a array by 2 equal 0 then do notheng since its even number
+                //++CounterForEvent;
+            } else{//if the reminder of i element in a array by 2 doesn't equal 0  do what in else body since its odd number
+                ++CounterForOdd;//add one to CounterForOdd
+                if (a[i] < min)// if the value of i element in a array less than the min
+                    min = a[i]; //then let min intilize to the value of i element in a array 
+            }//End of else body
+        }//End of for loop
+        if (CounterForOdd ==0){//if the CounterForOdd equal zero mean there is NO odd number
+            return "Odd Numbers are NOT Available";//return that string 
+        }//End of if body
+         return String.valueOf(min);//return the String min(Here we change the int(integer) max to String data type
+        
+    }//End of smallestOddNumber method 
+    public static int countMultipleOfNumberFive (int []a){//Start of countMultipleOfNumberFive method + return type (int(integer))+  int parameter list are: int []a
+        int counter =0 ;//A variable named counter has been declared  by int(integer) data type and initialized to 0
+        int LengthOfArray = a.length;//To calculate the length of a array
+       for(int i = 0; i < LengthOfArray ; i++){/*Start of for loop:[First Statement] a variable named i has been  
+             initialized to 0 which will excuted once before the loop begins(initial-action);[Second Staement]the loop body 
+            will excuted until this condition i less than LengthOfArray  become false (loop condition); 
+            [Third Statement] This statement i++ (i= i+1) will excuted after each loop(action-after-each-loop)*/
+        
+           if ( a[i]%5==0)++counter;//if the reminder of i element  in a array by 5 equal 0 then add one to the counter
+       }//End of for loop
+       return counter;//return the value of counter int(integer)
+    }//End of countMultipleOfNumberFive method 
+    
+    
+}//End of OddNumbers class
