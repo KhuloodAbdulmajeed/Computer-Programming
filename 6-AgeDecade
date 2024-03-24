@@ -1,0 +1,28 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package agedecade;
+
+/**
+Name: Khulood Khalid Abdulmajeed
+ID: 441009999
+GROUP: 14
+Lab#5
+ */
+public class AgeDecade {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int age1=23;
+        int decade=age1/10;
+        decade=decade+1;
+        System.out.println("You are: "+age1+" years old, and you are in decade: "+decade);
+        
+                }
+    
+    
+}
