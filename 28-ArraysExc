@@ -1,0 +1,47 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package khuloodabdulmajeed_arraysexc;
+
+/**
+Name:Khulood Khalied Abdulmajeed
+ID:441009999
+GROUP:14
+Lab#12
+ */
+import java.util.Scanner;//The Scanner import declaration
+public class KhuloodAbdulmajeed_ArraysExc {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {//Start of main
+        Scanner in = new Scanner (System.in);//Scanner object named get is created
+        char[] cArray={'a', 'b', 'g', '%', 'y','t','q','w','r','z', 'a', 'z', 'a'};// declare cArray with char(charectar) data type and Initializer list specifies the value for each element
+        
+        System.out.println("Enter the character you are looking for in the array:");//Print what inside the "" to the user to enter an char(chrectar) +here we use println to get the input in the new line
+        char EnteredChar = in.next().charAt(0);//Get a char(chrectar) from user for EntredChar  to see if its exist in the array or not
+        boolean isFound =charArrayMethods.checkGivenChar(cArray, EnteredChar);/* A variable named isFound has been declared to  boolean data type and initialized to 
+        the calling checkGivenChar method from charArrayMethods class with cArray and EnteredChar arguments */
+        if (isFound == true)System.out.println("Letter "+EnteredChar+" is found");//if isFound was true print what inside "" and the value of EnteredChar
+        else if (isFound == false)System.out.println("Letter "+EnteredChar+" is not found");//if isFound was false print what inside "" and the value of EnteredChar
+        
+        System.out.println("Enter the character you are counting:");//Print what inside the "" to the user to enter an char(chrectar) +here we use println to get the input in the new line
+        char CountLetter = in.next().charAt(0);//Get a char(chrectar) from user for CountLetter to count how many its exist in the array
+        int count = charArrayMethods.countGivenChar(cArray, CountLetter);/* A variable named count has been declared to int(integer) data type and initialized to 
+        the calling countGivenChar method from charArrayMethods class with cArray and CountLetter arguments */
+        System.out.println("There are "+count+" "+CountLetter);//Print what inside the "" and the value of count and CountLetter
+        
+        System.out.println("The new returned array without vowels is:");//Print what inside the "" to the user to show the new list elements +here we use println to get the input in the new line
+        charArrayMethods.removeVowels(cArray);//calling removeVowels method from charArrayMethods class with cArrayargument
+        System.out.println();//Just to end the program in new line (shoe the statement BUILD SUCCESSFUL  in the next line )
+        
+        
+        
+    }//End of main
+    
+    
+    
+}
