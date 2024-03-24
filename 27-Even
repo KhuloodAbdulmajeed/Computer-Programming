@@ -1,0 +1,61 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package khuloodabdulmajeed_even;
+
+import java.util.Scanner;
+
+/**
+Name:Khulood Khalied Abdulmajeed
+ID:441009999
+GROUP:14
+Lab#11
+ */
+import java.util.Scanner;//The Scanner import declaration
+public class KhuloodAbdulmajeed_Even {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {//Start of main
+        Scanner get = new Scanner (System.in);//Scanner object named get is created
+        
+        System.out.println("Enter postive integer number:");//Print what inside the "" to the user to enter an integer +here we use println to get the input in the new line
+        int EntredInt = get.nextInt();//Get an integer from user for EntredInt
+        
+        while(EntredInt<=0){//while the condtion(EntredInt less than or equal zero) is true do what in the block
+            System.out.println("Invalid input...Enter postive integer number:");//Print what inside "" to validate the input
+            EntredInt = get.nextInt();//Get an integer from user for EntredInt
+        }//End of while block
+        
+       even(EntredInt);//Calling the even method with EntredInt argument
+        
+    }//End of main
+     public static void even(int n){//Start of even method + unreturn type (void)+  String parameter list is: integer n
+         int EvenNum=0;//A variable named EvenNum has been declared  by int(integer) data type and initialized to 0
+         int ToNegN;//A variable named ToNegN has been declared  by int(integer) data type
+         ToNegN =n*-1;//A variable named ToNegN has been initialized to n*-1 to find the negtive n
+         int i=n;//A variable named i has been declared  by int(integer) data type and initialized to n
+         
+         while (i>=ToNegN){//while the condtion(i grater than or equal to zero) is true do what in the block
+             if( i % 2 == 0 ){//if the reminder of i by 2 is 0 do what in the block. this to find how many even number
+             ++EvenNum;}//++EvenNum= EvenNum+1 to count how many even numbers and add them to past value
+             --i;//--i = i=i-1 till i equal ToNegN wil go out of the loop
+         }//End of while loop
+         for ( ToNegN=n*-1; (n) >= ToNegN ; --n){/*Start of for loop:[First Statement] a variable named ToNegN has been  
+             initialized to n*-1 which will excuted once before the loop begins(initial-action);[Second Staement]the loop body 
+            will excuted until this condition n grater than or equal to 0 become false (loop condition); 
+            [Third Statement] This statement --n (n= n-1) will excuted after each loop(action-after-each-loop)*/
+             
+             if(n %2 ==0 && n%3==0)break;//if the number is even and divisible by 3 the progrom will go out of the loop(terminate the loop) by break
+         }//End of for loop
+         System.out.println("Even: "+(EvenNum-1));//Print what insid "" and the value of EvenNum-1 since it count zero and we need to substract it
+         System.out.println("Even number divisible by 3: "+n+" Loop terminated");//Print what insid "" and the value of n the number that loop have been terminated
+         
+         
+         
+     }
+    
+}
