@@ -1,0 +1,53 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package testoddnumbers;
+
+/**
+Name:Khulood Khalied Abdulmajeed
+ID:441009999
+GROUP:14
+Lab#12
+ */
+public class TestOddNumbers {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {//Start of main
+        int intArray[] = {2 , 3 , 5 , 4 , 10 , 15 , 12 , 7 , 9};// declare intArray with int(integer) data type and Initializer list specifies the value for each element
+        
+        int count = OddNumbers.contOddNumbers(intArray);/* A variable named count has been declared to int(integer) data type and initialized to 
+        the calling contOddNumbers method from OddNumbers class with intArray argument */
+        System.out.println("There are "+ count+ " odd numbers");//Print what inside the "" and the value of count
+        
+        int SumOfOdd = OddNumbers.sumOddNumbers(intArray);/* A variable named SumOfOdd has been declared to int(integer) data type and initialized to 
+        the calling sumOddNumbers method from OddNumbers class with intArray argument */
+        System.out.println("The sum of odd number is "+SumOfOdd);//Print what inside the "" and the value of SumOfOdd
+        
+        double AvgOfOdd = OddNumbers.averageOddNumber(intArray);/* A variable named AvgOfOdd has been declared to double data type and initialized to 
+        the calling averageOddNumber method from OddNumbers class with intArray argument */
+        System.out.printf("The average of odd numbers is: %.2f",AvgOfOdd);//Print what inside the "" and the value of AvgOfOdd +Here we used printf to round the number two digits after the comma
+        System.out.println();//to go new line
+        
+        String LargestOdd = OddNumbers.largestOddNumber(intArray);/* A variable named LargestOdd has been declared to String data type and initialized to 
+        the calling largestOddNumber method from OddNumbers class with intArray argument */
+        System.out.println("The largest odd numbers is "+LargestOdd);//Print what inside the "" and the value of LargestOdd
+        
+        String SmallestOdd = OddNumbers.smallestOddNumber(intArray);/* A variable named SmallestOdd has been declared to String data type and initialized to 
+        the calling smallestOddNumber method from OddNumbers class with intArray argument */
+        System.out.println("The smallest odd numbers is "+SmallestOdd);//Print what inside the "" and the value of SmallestOdd
+        
+        int DivsibleByFive = OddNumbers.countMultipleOfNumberFive(intArray);/* A variable named DivsibleByFive has been declared to int(integer) data type and initialized to 
+        the calling countMultipleOfNumberFive method from OddNumbers class with intArray argument */
+        System.out.println("There are "+DivsibleByFive+" numbers dividable by5");//Print what inside the "" and the value of DivsibleByFive
+    
+        
+        
+        
+    }//End of main
+    
+}
+
