@@ -1,0 +1,62 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package khuloodabdulmajeed_arraysexc;
+
+/**
+Name:Khulood Khalied Abdulmajeed
+ID:441009999
+GROUP:14
+Lab#12
+ */
+public class charArrayMethods {//Start of charArrayMethods class
+    public static boolean checkGivenChar (char[] a, char c){//Start of checkGivenChar method + return type (boolean)+  char parameter list are: char [] a, char c
+       int LengthOfArray = a.length;//To calculate the length of a array
+       for(int i = 0; i < LengthOfArray ; i++){/*Start of for loop:[First Statement] a variable named i has been  
+             initialized to 0 which will excuted once before the loop begins(initial-action);[Second Staement]the loop body 
+            will excuted until this condition i less than LengthOfArray  become false (loop condition); 
+            [Third Statement] This statement i++ (i= i+1) will excuted after each loop(action-after-each-loop)*/
+        
+           if ( a[i]== c){//if the elemint (i) for a array equal c start the if body
+              // System.out.println("Letter "+c+" is found");
+               return true;//return the boolean true
+           }//End of if body
+       }//End of for loop
+              // System.out.println("Letter "+c+" is not found");
+               return false;//if the if body wasn't excute since the condtion its false then it will go out from for loop to return false  
+           
+      
+    }//End of checkGivenChar method 
+    public static int countGivenChar (char[ ] a, char c){//Start of countGivenChar method + return type (int(integer))+  char parameter list are: char[ ] a, char c
+        int counter = 0;//A variable named counter has been declared  by int(integer) data type and initialized to 0
+        int LengthOfArray = a.length;//To calculate the length of a array
+       for(int i = 0; i < LengthOfArray ; i++){/*Start of for loop:[First Statement] a variable named i has been  
+             initialized to 0 which will excuted once before the loop begins(initial-action);[Second Staement]the loop body 
+            will excuted until this condition i less than LengthOfArray  become false (loop condition); 
+            [Third Statement] This statement i++ (i= i+1) will excuted after each loop(action-after-each-loop)*/
+           if(a[i]== c)//if the elemint (i) for a array equal c start the if body
+               ++counter;//add 1 to the counter whenever the condtion of was true
+       }
+       return counter;//return the value of counter int(integer)
+    }//End of countGivenChar method 
+    public static char[] removeVowels (char[ ] a){//Start of removeVowels method + return type (char(charectar))+  char parameter list is: char[ ] a
+        //char []jj = {'a', 'u', 'e', 'i','o', 'A','U','E','I','O'};
+        char [] newArry = new char [a.length];// declare and intilize newArry to char(charectar) data type with same size of a araay
+        
+        for(int i = 0;i < a.length;i++){/*Start of for loop:[First Statement] a variable named i has been  
+             initialized to 0 which will excuted once before the loop begins(initial-action);[Second Staement]the loop body 
+            will excuted until this condition i less than LengthOfArray  become false (loop condition); 
+            [Third Statement] This statement i++ (i= i+1) will excuted after each loop(action-after-each-loop)*/
+            if (a[i]=='a'||a[i]=='u'||a[i]=='e'||a[i]=='i'||a[i]=='o'||a[i]=='A'||a[i]=='U'||a[i]=='E'||a[i]=='I'||a[i]=='O')//if i element of a array equal any vowel in small or capital case
+            {continue;}//if the condtion if was true then back to for loop 
+            newArry[ i ]= a[ i ];//if the condtion if was false then make the value of i element in newArry array equal the value of i element in a array
+            System.out.print(newArry[ i ]+" ");//Print the value of i in newArry araay with space betweeen them
+        
+        }//End of for loop
+        return newArry;//return the char(charectar) array named newArry
+        
+    }//End of removeVowels method
+    
+}//End of charArrayMethods class
