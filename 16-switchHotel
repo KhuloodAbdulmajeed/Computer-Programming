@@ -1,0 +1,70 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package khuloodabdulmajeed_switchhotel;
+
+/**
+Name:Khulood Khalid Abdulmajeed
+ID: 441009999
+GROUP:14
+Lab#8
+ */
+import java.util.Scanner;
+public class KhuloodAbdulmajeed_switchHotel {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner get= new Scanner(System.in);
+        System.out.println("Room Menu:");
+        System.out.println("a: Suite with view,");
+        System.out.println("b: Executive,");
+        System.out.println("c: Standard");
+        System.out.println("Enter your choice:");
+        char RoomChoice= get.next().charAt(0);
+        float a = 2000;
+        float b = 1500;
+        float c = 800;
+        double Cost;
+        int NumberOfNights;
+        
+        switch (RoomChoice){
+            case 'a':
+                System.out.println("Enter number of nights:");
+                NumberOfNights = get.nextInt();
+                Cost = a*NumberOfNights;
+                if(NumberOfNights>=10){
+                    double Discount = Cost*0.40;
+                    System.out.println("You will get 40% discout = "+Discount+"SR");
+                    double AfterDiscount = Cost-Discount;
+                    System.out.println("You have to pay "+AfterDiscount+"SR");
+                }else if(NumberOfNights>4 && NumberOfNights<10) {
+                    double Discount = Cost*0.30;
+                    System.out.println("You will get 30% discout = "+Discount+"SR");
+                    double AfterDiscount = Cost-Discount;
+                    System.out.println("You have to pay "+AfterDiscount+"SR");
+                }else{
+                    System.out.println("No Discount....You have tp pay "+Cost+"SR");
+                }break;
+            case 'b':
+                System.out.println("Enter number of nights:");
+                NumberOfNights = get.nextInt();
+                Cost = b*NumberOfNights;
+                System.out.println("No Discount....You have tp pay "+Cost+"SR");
+                break;
+            case 'c':
+                System.out.println("Enter number of nights:");
+                NumberOfNights = get.nextInt();
+                Cost = c*NumberOfNights;
+                System.out.println("No Discount....You have tp pay "+Cost+"SR");
+                break;
+            default:
+                System.out.println("Wrong Choice!!!!");
+            
+        }
+    }
+    
+}
