@@ -1,0 +1,49 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package dealingwithstring;
+
+/**
+Name: Khulood Khalid Abdulmajeed
+ID: 441009999
+GROUP: 14
+Lab#5
+ */
+import java.util.Scanner;
+public class DealingWithString2 {
+      public static void main(String[] args) {
+        
+          Scanner get= new Scanner(System.in);
+          
+          System.out.println("Enter your FIRST word: ");
+          String word1=get.next();
+          System.out.println("Enter your SECOND word: ");
+          String word2=get.next();
+          System.out.println("Enter your THIRD word: ");
+          String word3=get.next();
+          
+          boolean Word1_Word3 = word1.equals(word3);
+          System.out.println("word1 ("+word1+") equals word3 ("+word3+") :"+Word1_Word3);
+          
+          boolean Word1EqualWord3 = (word1==word3);
+          System.out.println("word2 ("+word2+") == word3 ("+word3+") :"+Word1EqualWord3);
+          
+          System.out.println("word1 ("+word1+") compared to word2 ("+word2+") (ignord the case):"+word1.compareToIgnoreCase(word2));
+          
+          String word4= word1+word3;
+          System.out.println("After concatenation, word 4 is:"+word4);
+          
+          int LengthOfWord3 = word3.length();
+          String word5 = word1.substring(0,2)+word3.substring(LengthOfWord3-2,LengthOfWord3);
+          System.out.println("word 5 is:"+word5);
+         
+          
+        
+          
+          
+          
+          
+      }
+}
