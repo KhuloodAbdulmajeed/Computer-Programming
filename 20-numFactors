@@ -1,0 +1,50 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package khuloodabdulmajeed_numfactors;
+
+/**
+Name:Khulood Khalid Abdulmajeed
+ID:441009999
+GROUP:14
+Lab#10_Part2
+ */
+import java.util.Scanner;//The Scanner import declaration
+public class KhuloodAbdulmajeed_NumFactors {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner get = new Scanner(System.in);//Scanner object named get is created
+        int EnteredInt;//A variable named EnteredInt has been declared  by int(integer) data type 
+        int FactoralNum;//A variable named FactoralNum has been declared  by int(integer) data type 
+        System.out.println("Enter an Integer number (grater than zero):");//Print what inside the ""
+        EnteredInt=get.nextInt();//Get EnteredInt from user 
+        
+        while(EnteredInt<=0){ //While loop to check the Input Validation for nuber less than zero
+            System.out.print("Invalid Input.. Try again with an integer number grater than zero:");//Print what inside the "" if the condtion of loop is true
+            EnteredInt=get.nextInt();//Get EnteredInt from user 
+            
+        }//End of whilr loop
+        System.out.println("Factors of "+EnteredInt+" are:");//Print what inside the "" and the value of EnteredInt
+        for(int Start=1; Start<=EnteredInt;++Start){ /* Start of for loop:[First Statement] a variable named Start has been declared by int (integer) 
+            data type and initialized to 1 which will excuted once before the loop begins(initial-action);[Second Staement]the loop body 
+            will excuted until this condition Start less than or equal to EnteredInt become false (loop condition); [Third Statement] This statement
+            ++Start  will excuted after each loop(action-after-each-loop)
+            */
+           
+            
+            if (EnteredInt%Start==0){ //See if the condtion is true then it will exucute what inside the body to see what the facors
+                FactoralNum=Start;//To declare the FactoralNum to factors
+                System.out.print(FactoralNum+" "); //Print FactoralNum and Space
+                }//End of if body
+            }//End of for loop
+            
+        
+        
+    }
+    
+}
