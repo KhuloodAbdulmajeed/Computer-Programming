@@ -1,0 +1,68 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package weightcalc2;
+
+/**
+Name: Khulood Khalid Abdulmajeed
+ID: 441009999
+GROUP: 14
+Lab#5
+ */
+import java.util.Scanner;
+
+public class WeightCalc2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner get= new Scanner(System.in);
+        float FirstGWiegtLose;
+        float SecondGWeightLose;
+        float ThirdGWeightLose;
+        float FirstGNewWeight;
+        float SecondGNewWeight;
+        float ThirdNewWeight;
+        float TotalWeightLose;
+        
+        System.out.println("Enter the name of the FIRST girl:");
+        String Name1 = get.next();
+        System.out.println("Enter the Weight in Kg of the FIRST girl:");
+        double Weight1 = get.nextDouble();
+        System.out.println("Enter the Weight Lose Percentage of the FIRST girl:");
+        double WeightLosePer1 = get.nextDouble();
+        
+        System.out.println("Enter the name of the SECOND girl:");
+        String Name2 = get.next();
+        System.out.println("Enter the Weight in Kg of the SECOND girl:");
+        double Weight2 = get.nextDouble();
+        System.out.println("Enter the Weight Lose Percentage of the SECOND girl:");
+        double WeightLosePer2 = get.nextDouble();
+        
+        System.out.println("Enter the name of the THIRD girl:");
+        String Name3 = get.next();
+        System.out.println("Enter the Weight in Kg of the THIRD girl:");
+        double Weight3 = get.nextDouble();
+        System.out.println("Enter the Weight Lose Percentage of the THIRD girl:");
+        double WeightLosePer3 = get.nextDouble();
+      
+        FirstGWiegtLose = (float)(WeightLosePer1*Weight1);
+        SecondGWeightLose= (float)(WeightLosePer2*Weight2);
+        ThirdGWeightLose=(float)(WeightLosePer3*Weight3);
+        
+        FirstGNewWeight=(float)(Weight1-FirstGWiegtLose);
+        SecondGNewWeight= (float)(Weight2-SecondGWeightLose);
+        ThirdNewWeight= (float)(Weight3-ThirdGWeightLose);
+                
+        TotalWeightLose=(float)(FirstGWiegtLose+SecondGWeightLose+ThirdGWeightLose);
+                
+        System.out.println(Name1+" lose :"+FirstGWiegtLose+" Kg, and her new weight is:"+FirstGNewWeight+" Kg");
+        System.out.println(Name2+" lose :"+SecondGWeightLose+" Kg, and her new weight is:"+SecondGNewWeight+" Kg");
+        System.out.println(Name3+" lose :"+ThirdGWeightLose+" Kg, and her new weight is:"+ThirdNewWeight+" Kg");
+        System.out.println("The toltal weight lost for all of them is:"+TotalWeightLose+"Kg");
+    }
+    
+}
