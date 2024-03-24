@@ -1,0 +1,58 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package khuloodabdulmajeed_factorial;
+
+/**
+Name:Khulood Khalid Abdulmajeed
+ID:441009999
+GROUP:14
+Lab#10_Part2
+ */
+import java.util.Scanner;
+public class KhuloodAbdulmajeed_Factorial {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner get=new Scanner(System.in);
+        int StartingNum;
+        int EndingNum;
+        int Range;
+        int Factorail=1;
+     
+        
+        System.out.print("Enter the starting number: ");
+        StartingNum=get.nextInt();
+        System.out.print("Enter the ending number: ");
+        EndingNum=get.nextInt();
+        
+        while(EndingNum<=StartingNum){
+            System.out.println("Wrong range of values");
+          
+            break;}
+       
+        while (EndingNum>StartingNum){
+        Range=EndingNum;
+        
+        for(int i=StartingNum;StartingNum<=EndingNum;++i){
+            Factorail*=i;
+            
+            System.out.println("The factorial of "+StartingNum+" = "+Factorail);  
+            ++StartingNum;
+        }
+        
+        System.out.println("The range of this set is: "+Range);
+
+        }
+
+
+
+
+        }
+        
+    }
+   
