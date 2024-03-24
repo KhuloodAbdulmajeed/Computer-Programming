@@ -1,0 +1,28 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package seperatingdigits;
+
+/**
+Name: Khulood Khalid Abdulmajeed
+ID: 441009999
+GROUP: 14
+Lab#5
+ */
+public class SeperatingDigits {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int Num=67;
+        int FirstDigit= Num/10;
+        int SecondDigit= Num%10;
+        System.out.println("The two digit number is:"+Num);
+        System.out.println("The first digit is:"+FirstDigit);
+        System.out.println("The second digits is:"+SecondDigit);
+    }
+    
+}
