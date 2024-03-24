@@ -1,0 +1,128 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package khuloodabdulmajeed_gpa;
+
+/**
+* Name:Khulood Khalid Abdulmajeed
+* ID:441009999
+* GROUP:14
+* Lab#10_Part2
+ */
+import java.util.Scanner;//The Scanner import declaration
+public class KhuloodAbdulmajeed_GPA {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner get = new Scanner (System.in);//Scanner object named get is created
+        int UserChoice=0;//A variable named UserChoice has been declared  by int(integer) data type and initialized to 0
+        int StudentID=0;//A variable named StudentID has been declared  by int(integer) data type and initialized to 0
+        String StudentName="";//A variable named StudentName has been declared  by String data type and initialized to ""
+        int StudentAge=0;//A variable named StudentAge has been declared  by int(integer) data type and initialized to 0
+        int MarkInCourse1=0;//A variable named MarkInCourse1 has been declared  by int(integer) data type and initialized to 0
+        int HoursInCourse1=0;//A variable named HoursInCourse1 has been declared  by int(integer) data type and initialized to 0
+        int MarkInCourse2=0;//A variable named MarkInCourse2 has been declared  by int(integer) data type and initialized to 0
+        int HoursInCourse2=0;//A variable named HoursInCourse2 has been declared  by int(integer) data type and initialized to 0
+        int MarkInCourse3=0;//A variable named MarkInCourse3 has been declared  by int(integer) data type and initialized to 0
+        int HoursInCourse3=0;//A variable named HoursInCourse3 has been declared  by int(integer) data type and initialized to 0
+        double GPA=0;//A variable named GPA has been declared  by double data type and initialized to 0
+        //double GPAforCourse1=0;//A variable named GPAforCourse1 has been declared  by double data type and initialized to 0
+        //double GPAforCourse2=0;//A variable named GPAforCourse2 has been declared  by double data type and initialized to 0
+        //double GPAforCourse3=0;//A variable named GPAforCourse3 has been declared  by double data type and initialized to 0
+        int Hours;//A variable named Hours has been declared  by int(integer) data type 
+        double GradeMark=0;//A variable named GradeMark has been declared  by double data type and initialized to 0
+        String GradeLetter="";//A variable named GradeLetter has been declared  by String data type and initialized to ""
+        
+        
+        while (UserChoice != 4) {//To repeat the GPA Calculator until they enter 4
+        System.out.println("\n*** GPA Calculator ***\n" +
+                "1 .Enter Student's Information\n" +
+                "2 .Enter Marks and Hours for 3 courses\n" +
+                "3 .Prints Student's Information, GPA and Grade\n" +
+                "4 .Exit\n" +"Enter your choice :");//Print what inside the "" and \n:for new line
+        UserChoice=get.nextInt();//Get UserChoice integer from user
+        
+        switch(UserChoice){//Start UserChoice switch 
+            
+            case 1://if UserChoice entered 1
+                System.out.println("Enter student's Id:");//Print what inside the ""
+                StudentID=get.nextInt();//Get the StudentID integer from user
+                System.out.println("Enter student's name:");//Print what inside the ""
+                StudentName=get.next();//Get the StudentName String from user
+                System.out.println("Enter student's age:");//Print what inside the ""
+                StudentAge=get.nextInt();//Get the StudentID integer from user
+                break;//break statement will exit the Switch
+                
+            case 2://if UserChoice entered 2
+                System.out.println("Enter student's mark in course 1");//Print what inside the ""
+                MarkInCourse1=get.nextInt();//Get the MarkInCourse1 integer from user
+                System.out.println("Enter hours of course 1");//Print what inside the ""
+                HoursInCourse1 = get.nextInt();//Get the HoursInCourse1 integer from user
+                System.out.println("Enter student's mark in course 2");//Print what inside the ""
+                MarkInCourse2=get.nextInt();//Get the MarkInCourse2 integer from user
+                System.out.println("Enter hours of course 2");//Print what inside the ""
+                HoursInCourse2 = get.nextInt();//Get the HoursInCourse2 integer from user
+                System.out.println("Enter student's mark in course 3");//Print what inside the ""
+                MarkInCourse3=get.nextInt();//Get the MarkInCourse3 integer from user
+                System.out.println("Enter hours of course 3");//Print what inside the ""
+                HoursInCourse3 = get.nextInt();//Get the HoursInCourse3 integer from user
+                Hours =HoursInCourse1+HoursInCourse2+HoursInCourse3;//to Find the summation of hours
+                GPA= ((MarkInCourse1*HoursInCourse1)+(MarkInCourse2*HoursInCourse2)+(MarkInCourse3*HoursInCourse3))/Hours;//to calculate the GPA
+               /* GPAforCourse1=(MarkInCourse1*HoursInCourse1)/HoursInCourse1;//to calculate the GPA for course 1
+                GPAforCourse2=(MarkInCourse2*HoursInCourse2)/HoursInCourse2;//to calculate the GPA for course 2
+                GPAforCourse3=(MarkInCourse3*HoursInCourse3)/HoursInCourse3;//to calculate the GPA for course 3*/
+                GradeMark=(((double)(MarkInCourse1+MarkInCourse2+MarkInCourse3)*Hours)/Hours)/100;//to calculate the GPA for total course 
+                if (GPA<=100 && GPA>=90) {//if the GPA between 100-90 the grade will ber A
+                            GradeLetter="A";
+                        }else if (GPA<90 && GPA>=80) {//if the GPA between 90-80 the grade letter will ber B
+                            GradeLetter="B";
+                        }else if (GPA<80 && GPA>=70) {//if the GPA between 80-70 the grade letter will ber C
+                            GradeLetter="C";
+                        }else if (GPA<70 && GPA>=60) {//if the GPA between 70-60 the grade letter will ber D
+                            GradeLetter="D";
+                        }else if (GPA<60) {//if the GPA less than 60 the grade letter will ber F
+                            GradeLetter="F";
+                        }
+                
+                break;//break statement will exit the Switch
+                
+            case 3://if UserChoice entered 3
+                if(StudentID!=0 &&StudentName!="" && StudentAge!=0&&MarkInCourse1!=0 && HoursInCourse1!=0
+                        &&MarkInCourse2!=0 && HoursInCourse2!=0 &&MarkInCourse3!=0 && HoursInCourse3!=0){//To check if the user entered case 1 and 2; if the user enter do what next in if body
+                    System.out.println("*** Student's Inforamtion ***");//Print what inside ""
+                    System.out.println("Student ID: "+StudentID);//Print what inside "" and StudentID
+                    System.out.println("Student Name: "+StudentName);//Print what inside "" and StudentName
+                    System.out.println("Student Age: "+StudentAge);//Print what inside "" and StudentAge
+                    System.out.println("Student GPA: "+GradeMark);//Print what inside "" and GradeMark
+                    System.out.println("Student Grade: "+GradeLetter);//Print what inside "" and GradeLetter
+                }//End of if body
+                else {//if the user didn't entered case 1 and case 2 do what in else body 
+                    if(StudentID==0 &&StudentName=="" && StudentAge==0){//if the user didn't entered just case 1 print what inside " "  
+                    System.out.println("Empty Student information ! Please Enter the student's information first");
+                    }//End of if body
+                    if(MarkInCourse1==0 && HoursInCourse1==0 &&MarkInCourse2==0 &&
+                        HoursInCourse2==0 &&MarkInCourse3==0 && HoursInCourse3==0){//if the user didn't entered just case 2 print what inside " "  
+                    System.out.println("Empty Marks and Hours ! Please Enter the student's mark and hours first !!");
+                    }//End of if body
+                }//End of else body
+                break;//break statement will exit the Switch
+                
+            case 4://if UserChoice entered 4
+                System.out.println("Exist.. Good Bye..");//Print what inside ""
+                break;//break statement will exit the Switch
+                
+            default://If the user entered number else than (1,2,3,or4)
+                System.out.println("Wrong Choice!!!");//Print whar inside the ""
+            
+            
+        }//End of switch
+        
+        }//End of while
+        
+    }
+    
+}
