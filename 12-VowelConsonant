@@ -1,0 +1,55 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package vowelconsonant;
+
+/**
+Name: Khulood Khalid Abdulmajeed
+ID: 441009999
+GROUP: 14
+Lab#7
+ */
+import java.util.Scanner;
+public class VowelConsonant {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       Scanner get= new Scanner(System.in);
+       
+       System.out.print("Enter a letter:");
+       char letter =get.next().charAt(0);
+       
+       if ((letter>='a'&&letter<='z')||(letter>='A'&&letter<='Z')){
+           
+          
+           switch (letter){
+               case 'a':
+               case 'e':
+               case 'i':
+               case 'o':
+               case 'u':
+               case 'A':
+               case 'E':
+               case 'I':
+               case 'O':
+               case 'U':
+                   System.out.println(letter+ " is a vowel");
+                   break;
+               default:
+                   System.out.println(letter + " is a consonant");
+           }
+           
+           
+         
+        
+               
+       }else {
+           System.out.println(letter+" is an invalid input");}
+           
+    }
+    
+}
