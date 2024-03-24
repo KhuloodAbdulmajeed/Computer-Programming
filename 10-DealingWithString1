@@ -1,0 +1,43 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package dealingwithstring;
+
+/**
+Name: Khulood Khalid Abdulmajeed
+ID: 441009999
+GROUP: 14
+Lab#5
+ */
+public class DealingWithString {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        String myStr = new String ("Computer Programming with Java");
+        int LengthOfmyStr= myStr.length();
+        int indexOfmyStr = myStr.indexOf("Java");
+        char CharOfmyStr = myStr.charAt(6);
+        int FirstindexOfM = myStr.indexOf("m");
+        int LastindexOfM = myStr.lastIndexOf("m");
+        String newMyStr = myStr.substring(0, FirstindexOfM)+myStr.substring(FirstindexOfM+1,LastindexOfM )+myStr.substring(LastindexOfM+1, LengthOfmyStr);
+        
+        System.out.println("The string is: "+myStr);
+        System.out.println("The string in lower-case letters is: "+myStr.toLowerCase());
+        System.out.println("The string in upper-case letters is: "+myStr.toUpperCase());
+        System.out.println("The lenghth of the string is: "+LengthOfmyStr);
+        System.out.println("The index of \"Java\" is: "+indexOfmyStr);
+        System.out.println("The character at Postion 6 is: "+CharOfmyStr);
+        System.out.println("The first index of \'m\' is: "+FirstindexOfM+", and the last insex of is: "+LastindexOfM);
+        System.out.println("The newstring is: "+newMyStr);
+        
+        
+        
+        
+        
+    }
+    
+}
