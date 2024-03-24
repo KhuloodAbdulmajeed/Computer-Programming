@@ -1,0 +1,53 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package weightcalc;
+
+/**
+Name: Khulood Khalid Abdulmajeed
+ID: 441009999
+GROUP: 14
+Lab#5
+ */
+public class WeightCalc {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        double Maha=77.5;
+        double Rana= 65.7;
+        double Areeg=71.2;
+        double MahaPe= 8;
+        double RanaPe=3;
+        double AreegPe=6;
+        final double MahaWiegtLose;
+        final float RanaWeightLose;
+        final double AreegWeightLose;
+        double MahaNewW;
+        float RanaNewW;
+        double AreegNewW;
+        float TotalWeight;
+        
+        
+        MahaWiegtLose = MahaPe*Maha/100;
+        RanaWeightLose= (float)(RanaPe*Rana/100);
+        AreegWeightLose= AreegPe*Areeg/100;
+        
+        MahaNewW=Maha-MahaWiegtLose;
+        RanaNewW= (float)(Rana-RanaWeightLose);
+        AreegNewW= Areeg-AreegWeightLose;
+                
+        TotalWeight=(float)(MahaWiegtLose+RanaWeightLose+AreegWeightLose);
+                
+        System.out.println("Maha lost:"+MahaWiegtLose+"kg, and her new weight is:"+MahaNewW+"kg");
+        System.out.println("Rana lost:"+RanaWeightLose+"kg, and her new weight is:"+RanaNewW+"kg");
+        System.out.println("Areej lost:"+AreegWeightLose+"kg, and her new weight is:"+AreegNewW+"kg");
+        System.out.println("The toltal weight lost for all of them is:"+TotalWeight+"kg");
+                
+        
+    }
+    
+}
