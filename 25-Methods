@@ -1,0 +1,83 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package khuloodabdulmajeed_methods;
+
+/**
+Name:Khulood Khalied Abdulmajeed
+ID:441009999
+GROUP:14
+Lab#11
+ */
+import java.util.Scanner;//The Scanner import declaration
+public class KhuloodAbdulmajeed_Methods {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {//Start of main
+        Scanner get = new Scanner(System.in);//Scanner object named get is created
+        
+        System.out.println("Enter length and width:");//Print what inside the "" to the user to enter length and width +here we use println to get the input in the new line
+        int EnterdLen = get.nextInt();//This one to get length int from the user
+        int EnterdWid = get.nextInt();//This one to get width int from the user
+        isRectangle(EnterdLen,EnterdWid);//Calling the isRectangle method with EnterdLen and EnterdWid arguments
+        
+        System.out.println("Enter THREE double numbers:");//Print what inside the "" to the user to enter 3 double +here we use println to get the input in the new line
+        double DoubleNum1 = get.nextDouble();//This one to get 1st double from the user
+        double DoubleNum2 = get.nextDouble();//This one to get 2end double from the user
+        double DoubleNum3 = get.nextDouble();//This one to get 3rd double from the user
+        System.out.println("The average of the THREE number is: "+calcAverage(DoubleNum1,DoubleNum2,DoubleNum3));/*Print what inside "" and Calling the
+        calcAverage method with DoubleNum1m DoubleNum2, and DoubleNum3 arguments and print a new line*/
+        
+        System.out.println("Enter FOUR double numbers:");//Print what inside the "" to the user to enter 4 double +here we use println to get the input in the new line
+        double EnteredDouble1 = get.nextDouble();//This one to get 1st double from the user
+        double EnteredDouble2 = get.nextDouble();//This one to get 2end double from the user
+        double EnteredDouble3 = get.nextDouble();//This one to get 3rd double from the user
+        double EnteredDouble4 = get.nextDouble();//This one to get 4th double from the user
+        System.out.println("The average of the FOUR number is: "+calcAverage(EnteredDouble1,EnteredDouble2,EnteredDouble3,EnteredDouble4));/*Print what inside "" and
+        Calling the calcAverage method with DoubleNum1, DoubleNum2, DoubleNum3, and DoubleNum4 arguments and print a new line*/
+        
+        System.out.println("Enter START and END of the range to print all even numbers:");//Print what inside the "" to the user to enter start and end int +here we use println to get the input in the new line
+        int StartNum = get.nextInt();//This one to get start number int from the user
+        int EndNum = get.nextInt();//This one to get end number int from the user
+        System.out.println("Even numbers in the range between "+StartNum+" and "+EndNum+ " are:");//Print what inside "" and StartNum and EndNum
+        printOnlyEven(StartNum,EndNum);//Calling the printOnlyEven method with StartNum and EndNum arguments
+        
+    }//End of main
+    public static boolean isRectangle(int length, int width){//Start of isRectangle method + return type (boolean)+  integer parameter list are: length and width
+        if (length == width){//if length and width are equal do what in the block
+            System.out.println("Square");// print Square and go to new line
+            return false ;//return the false boolean
+        }else{//if the condtion of if is false
+            System.out.println("Rectangle");// print Rectangle and go to new line
+            return true ;//return the true boolean
+        }//End of else block
+        
+    }//End of isRectangle method
+    public static double calcAverage(double n1, double n2, double n3){//Start of calcAverage method + return type (double)+  double parameter list are: n1, n2, and n3
+        double average3num;//A variable named average3num has been declared  by double) data type 
+        average3num =(n1+n2+n3)/3;//initializing average3num and to find the average of 3 numbers and 
+        return average3num;//return the average3num(average) double
+        
+    }//End of calcAverage method
+    public static double calcAverage(double n1, double n2, double n3, double n4){//Start of calcAverage method + return type (double)+  double parameter list are: n1, n2, n3, and n4
+        double average4num;//A variable named average4num has been declared  by double) data type 
+        average4num =(n1+n2+n3+n4)/4;//initializing average4num and to find the average of 4 numbers and 
+        return average4num;//return the average4num(average) double
+    }//End of calcAverage method which is overloading 
+    public static void printOnlyEven(int rangeStart, int rangeEnd){//Start of printOnlyEven method + unreturn type (void)+  integer parameter list are: n1, n2, n3, and n4
+        for (int i=rangeStart;i<=rangeEnd;i++){/*Start of for loop:[First Statement] a variable named i has been declared by int(integer) 
+            data type and initialized to rangeStart which will excuted once before the loop begins(initial-action);[Second Staement]the loop body 
+            will excuted until this condition i less than or equal to rangeEnd become false (loop condition); 
+            [Third Statement] This statement i++ (i=i+1) will excuted after each loop(action-after-each-loop)*/
+            if (i%2==0){//if the the reminder of i by 2 is zero to see the even number(s) 
+                System.out.print(i+" ");//Print the value of i and space between them
+            }//End of if block
+        }//End of for loop
+        
+    }//End of printOnlyEven method 
+    
+}//End of the class
