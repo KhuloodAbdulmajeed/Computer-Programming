@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package arithmetic.java;
+
+/**
+ *Name: Khulood Khalid Abdulmajeed
+ * ID: 441009999
+ * Group: 14
+ * Lab# 4
+ */
+public class ArithmeticJava {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int num1 = 10;
+        int num2 = 15;
+        int num3 = 35;
+        double Sum;
+        double Product;
+        double Average;
+        double exp;
+                        
+        Sum = num1 + num2 + num3;
+        Product = num1 * num2 * num3;
+        Average = (num1 + num2 + num3) / 3.0;
+        exp = (10.5/num3)+((5+num1*num2)/(num3-num1))*(12);
+        System.out.println( "The sum is: " + Sum );
+        System.out.println( "The product is: " + Product );
+        System.out.println( "The average is:" + Average );
+        System.out.println("The expression =" + exp);
+    }
+    
+}
