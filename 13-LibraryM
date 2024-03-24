@@ -1,0 +1,39 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package khuloodabdulmajeed_librarym;
+
+/**
+Name: Khulood Khalid Abdulmajeed
+ID: 441009999
+GROUP: 14
+Lab#7
+ */
+import java.util.Scanner;
+public class KhuloodAbdulmajeed_LibraryM {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner get= new Scanner (System.in); 
+        System.out.println("Enter number of borrowed books:");
+        int BorrowedBooks = get.nextInt();
+        System.out.println("Enter Your membership duration:");
+        int Duration = get.nextInt();
+         
+        if (Duration>3 && BorrowedBooks>10){
+            System.out.println("Your membership is Golden");
+            
+        }else if (Duration>3 && BorrowedBooks<=10){
+            System.out.println("Your membership is Silver");
+                    }else if (Duration<=3 && BorrowedBooks>10){
+                        System.out.println("Your membership is Bronze");
+                    }else { System.out.println("No library membership");}
+                    
+                    }
+    }
+    
+
