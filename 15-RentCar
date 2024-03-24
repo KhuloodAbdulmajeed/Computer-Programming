@@ -1,0 +1,81 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package khuloodabdulmajeed_rentcar;
+
+/**
+Name: Khulood Khalid Abdulmajeed
+ID: 441009999
+GROUP: 14
+Lab#7
+ */
+
+import java.util.Scanner;
+public class KhuloodAbdulmajeed_RentCar {
+
+    /**
+     * @param args the command line arguments
+     */
+    
+    public static void main(String[] args) {
+        Scanner get = new Scanner (System.in);
+        System.out.println("Car Menu:");
+        System.out.println("a: Best,");
+        System.out.println("B: Good,");
+        System.out.println("c: Economy");
+        System.out.println("Enter your choice:");
+        char CarChoice= get.next().charAt(0);
+        
+        float a = 200;
+        float b = 120;
+        float c = 80;
+        double RentalPay ;
+        int RentalDays;
+        
+        switch (CarChoice){
+            case 'a':
+                System.out.println("Enter number of rental days:");
+                RentalDays = get.nextInt();
+                RentalPay = a*RentalDays;
+                
+                if (RentalDays>5){
+                    double Discount = RentalPay*0.35;
+                    System.out.println("You will get 35% discount = "+Discount+"SR");
+                    double AfterDiscount = RentalPay-Discount;
+                    System.out.println("You have to pay "+AfterDiscount+"SR");
+                    break;}
+                else {
+                    System.out.println("There is no discoutn. You have to pay "+RentalPay+"SR");
+                }
+            case 'b':
+                System.out.println("Enter number of rental days:");
+                RentalDays = get.nextInt();
+                RentalPay = b*RentalDays;
+                
+                if (RentalDays>7){
+                    double Discount = RentalPay*0.40;
+                    System.out.println("You will get 40% discount = "+Discount+"SR");
+                    double AfterDiscount = RentalPay-Discount;
+                    System.out.println("You have to pay "+AfterDiscount+"SR");
+                    
+                }else {
+                    System.out.println("There is no discoutn. You have to pay "+RentalPay+"SR");
+                }
+                
+                break;
+            case 'c':
+                System.out.println("Enter number of rental days:");
+                RentalDays = get.nextInt();
+                RentalPay = c*RentalDays;
+                System.out.println("There is no discoutn. You have to pay "+RentalPay+"SR");
+                break;
+            default:
+                System.out.println("Wrong Choice!!!");
+                
+                
+        }
+    }
+    
+}
