@@ -1,0 +1,35 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package temperature_conversion;
+
+/**
+Name:Khulood Khalid Abdulmajeed
+ID: 441009999
+GROUP:14
+Lab#10
+ */
+public class TEMPERATURE_CONVERSION {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        
+        
+        for (double C = 5 ;C<=50 ;C=C+5){ /*Start of for loop:[First Statement] a variable named c has been declared by double 
+            data type and initialized to 5 which will excuted once before the loop begins(initial-action);[Second Staement]the loop body 
+            will excuted until this condition c less than or equal to 50 become false (loop condition); [Third Statement] This statement
+            c=c+5 will excuted after each loop(action-after-each-loop)*/
+           double F;//A variable named F  has been declared by double data type
+           F = 1.8 * C +32.0; //The mathematical operation which state F equal to 1.8 multiply by C plus 32.0
+           System.out.println("Temperature in Celsius is "+C+", and the temperature in Fahrenheit is "+F);/*This sentence will print in the 
+           output "Temperature in Celsius is "plus the varible C plus the sentence " , and the temperature in Fahrenheit is " plus the varible F
+           */
+        }//End of for loop/body
+    }
+    
+}
