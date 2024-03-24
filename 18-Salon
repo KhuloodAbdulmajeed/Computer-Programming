@@ -1,0 +1,110 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package khuloodabdulmajeed_salon;
+
+/**
+Name:Khulood Khalid Abdulmajeed
+ID: 441009999
+GROUP:14
+Lab#10
+ */
+import java.util.Scanner;//The Scanner import declaration
+public class KhuloodAbdulmajeed_Salon {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner get = new Scanner(System.in);//Scanner object named get is created
+        System.out.println("Beauty Salon Services: \na: Hair Cut, \nb: Massage, \nc: Facial \nEnter your choice:");/*
+        This sentence will print in the output "Beauty Salon Services: \n(starting NEW line)a: Hair Cut, \n(starting NEW line)b: Massage,
+        \n(starting NEW line)c: Facial \n(starting NEW line)Enter your choice:" */
+        char SalonChoice = get.next().charAt(0);/*A variable named SalonChoice has been declared  by char(character) data type and 
+        initialized to user input and use the string method charAt(0) which take the first character */
+        int LoyaltyPoints = 0; //A variable named LoyaltyPoints has been declared  by int(integer) data type and initialized to 0
+        int UserLoyaltyPoints ;//A variable named UserLoyaltyPoints has been declared by int(integer) data type
+        double DiscountPayment;//A variable named DiscountPayment has been declared by double data type
+        double Payment;//A variable named Payment has been declared by double data type
+        int HairCutServies;//A variable named HairCutServies has been declared by int(integer) data type
+        
+        
+        switch (SalonChoice){//Start of switch-case selection of SalonChoice
+            case 'a'://if SalonChoice is a do what in this case
+                
+                System.out.println("Hair Cut Servies: \n1: Short Hair, \n2: Medium Hair \n3: Long Hair \nEnter your choice:");/*
+                This sentence will print in the output "Hair Cut Servies: \n(starting NEW line)1: Short Hair,
+                \n(starting NEW line)2: Medium Hair \n(starting NEW line)3: Long Hair \n(starting NEW line)Enter your choice:"
+                */
+                HairCutServies = get.nextInt();//Get from the user an integer for HairCutServies
+                switch (HairCutServies){//Start of switch-case selection of HairCutServies
+                    case 1://if HairCutServies is 1 do what in this case
+                        LoyaltyPoints = LoyaltyPoints+1;//The mathematical operation which state LoyaltyPoints equal to LoyaltyPoints plus 1 will excute
+                        Payment =70;//A variable named payment has been initialized to 70
+                        break;//after ending the case go out of switch-case selection of UserLoyaltyPoints
+                    case 2://if HairCutServies is 2 do what in this case
+                        LoyaltyPoints = LoyaltyPoints+1;//The mathematical operation which state LoyaltyPoints equal to LoyaltyPoints plus 1 will excute
+                        Payment = 100;//A variable named payment has been initialized to 100
+                        break;//after ending the case go out of switch-case selection of UserLoyaltyPoints
+                    case 3://if HairCutServies is 3 do what in this case
+                        LoyaltyPoints = LoyaltyPoints+2;//The mathematical operation which state LoyaltyPoints equal to LoyaltyPoints plus 2 will excute
+                        Payment = 130;//A variable named payment has been initialized to 130
+                        break;//after ending the case go out of switch-case selection of UserLoyaltyPoints
+                    default://if HairCutServies is else than (1,2,3) do what in this case
+                        System.out.println("Wrong Choice!!! \nGood Bye");/*
+                        This sentence will print in the output "Wrong Choice!!! \n(starting NEW linr) Good Bye"
+                        */
+                        return;//after ending the default case END the program
+                } //End of switch-case selection of UserLoyaltyPoints
+                break;//after ending the case go out of switch-case selection of SalonChoice
+            case 'b'://if SalonChoice is b do what in this case
+                LoyaltyPoints = LoyaltyPoints+2;//The mathematical operation which state LoyaltyPoints equal to LoyaltyPoints plus 2 will excute
+                Payment = 180;//A variable named payment has been initialized to 180
+                break;//after ending the case go out of switch-case selection of SalonChoice
+            case 'c'://if SalonChoice is c do what in this case
+                LoyaltyPoints = LoyaltyPoints+3;//The mathematical operation which state LoyaltyPoints equal to LoyaltyPoints plus 3 will excute
+                Payment = 160;//A variable named payment has been initialized to 160
+                break;//after ending the case go out of switch-case selection of SalonChoice
+            default://if SalonChoice is else than(a,b,c) do what in this case
+                System.out.println("Wrong Choice!!! \nBye");/*
+                This sentence will print in the output "Wrong Choice!!! \n(starting NEW linr)Bye"
+                */
+                return;//after ending the default case END the program
+        }//End of switch-case selection of SalonChoice
+        System.out.println("Enter your current loyalty points:");/*
+        This sentence will print in the output "Enter your current loyalty points:"
+        */
+        UserLoyaltyPoints = get.nextInt();//Get from the user an integer for UserLoyaltyPoints
+        while (UserLoyaltyPoints<0){//Start the while loop for this condition if UserLoyaltyPoints less than zero do what in the body
+            System.out.println("Negative number!!! ReEnter your Current loyalty pounts:");/*
+            This sentence will print in the output "Negative number!!! ReEnter your Current loyalty pounts:"
+            */
+            UserLoyaltyPoints = get.nextInt();//Get from the user an integer for UserLoyaltyPoints
+        } //End of while block
+        LoyaltyPoints= LoyaltyPoints+UserLoyaltyPoints;//The mathematical operation which state LoyaltyPoints equal to LoyaltyPoints plus UserLoyaltyPoints will excute
+        System.out.println("Your points now:"+LoyaltyPoints);/*
+        This sentence will print in the output "Your points now:" plus the varible LoyaltyPoints
+        */
+        if (LoyaltyPoints>10){//Start of if block for this condtion: LoyaltyPoints grater than 10
+            DiscountPayment = Payment*0.15;//The mathematical operation which state DiscountPayment equal to Payment multiply by 0.15 will excute
+            Payment = Payment-DiscountPayment;//The mathematical operation which state Payment equal to Payment minus DiscountPayment will excute
+            System.out.println("You will get 15% discount = "+DiscountPayment+"SR");/*
+            This sentence will print in the output "You will get 15% discount = " plus the varible DiscountPayment plus the sentence "SR" 
+            */
+            System.out.println("You have to pay "+Payment+"SR");
+        }//End of if block
+        else {//Start of else block
+            System.out.println("There is no discount. You have to pay "+Payment);/*
+            This sentence will print in the output "There is no discount. You have to pay " plus the varible Payment
+            */
+        }//End of else block
+        
+        
+        
+        
+        
+    }
+    
+}
